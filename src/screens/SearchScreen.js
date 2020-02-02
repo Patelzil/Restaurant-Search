@@ -24,18 +24,9 @@ const SearchScreen = () => {
             { errorMessage ? <Text>{errorMessage}</Text> : null}
             <Text>We have found {results.length} results</Text>
             <ScrollView>
-                <ResultLists
-                    results={filterResultsByPrice('$')}
-                    title="Cost Effective"
-                />
-                <ResultLists
-                    results={filterResultsByPrice('$$')}
-                    title="Bit Pricier"
-                />
-                <ResultLists
-                    results={filterResultsByPrice('$$$')}
-                    title="Big Spender"
-                />
+                <ResultLists results={filterResultsByPrice('$')} title="Cost Effective"/>
+                <ResultLists results={filterResultsByPrice('$$')} title="Bit Pricier"/>
+                <ResultLists results={filterResultsByPrice('$$$')} title="Big Spender"/>
             </ScrollView>
         </View>
     )
